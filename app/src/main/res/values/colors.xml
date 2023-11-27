@@ -3,5 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="Blue">#037CC7</color>
+    <color name="White">#FFFFFF</color>
     <!-- Add other colors as needed -->
 </resources>

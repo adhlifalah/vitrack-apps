@@ -1,0 +1,55 @@
+<!-- activity_homescreen.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="16dp"
+android:background="#FFFFFF"
+tools:context=".HomescreenActivity">
+
+<!-- SearchView -->
+<SearchView
+    android:id="@+id/searchView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:queryHint="Search..."
+    android:background="@drawable/rounded_square_background"
+    />
+
+<!-- ImageView for Image -->
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="match_parent"
+    android:layout_height="380dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:adjustViewBounds="true"
+    android:scaleType="fitXY"
+    android:src="@drawable/medical" />
+
+
+<!-- Button for Medical Check Up -->
+<Button
+    android:id="@+id/btnDaftar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Daftar" />
+
+<!-- Button for Check Blood Sugar -->
+<Button
+    android:id="@+id/btnRiwayat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Riwayat"
+    android:onClick="openRiwayatActivity" />
+
+<!-- Button for Home -->
+<Button
+    android:id="@+id/btnKonsultasi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Konsultasi" />
+
+</LinearLayout>

@@ -1,6 +1,5 @@
-<!-- activity_main.xml -->
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,49 +8,119 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <!-- SearchView -->
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:queryHint="Search..."
-        android:background="@drawable/rounded_square_background"
-    />
-
-    <!-- ImageView for Image -->
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logoVitrackText"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/medical" />
+        android:layout_height="160dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/logo_vitrack_text" />
 
-
-    <!-- Button for Medical Check Up -->
-    <Button
-        android:id="@+id/btnDaftar"
+    <TextView
+        android:id="@+id/silahkanLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Daftar" />
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Silahkan login untuk masuk ke akun anda"
+        android:textSize="18sp" />
 
-    <!-- Button for Check Blood Sugar -->
-    <Button
-        android:id="@+id/btnRiwayat"
+    <EditText
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Riwayat"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/form_border"
+        android:hint="Username"
+        android:minHeight="48dp"
+        android:paddingStart="20dp" />
 
-        android:onClick="openRiwayatActivity" />
-
-    <!-- Button for Home -->
-    <Button
-        android:id="@+id/btnKonsultasi"
+    <EditText
+        android:id="@+id/editTextPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Konsultasi" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/form_border"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="20dp" />
+
+    <TextView
+        android:id="@+id/lupaPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:text="Lupa Password?"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/buttonMasuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Masuk Aplikasi"
+        android:background="@drawable/button_border"
+        android:textColor="@color/White"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="197dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/belumLogin"
+                android:layout_width="231dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                android:gravity="center"
+                android:text="Belum bisa login aplikasi?"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/sinkronAkun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_weight="1"
+                android:text="Sinkron Akun"
+                android:textColor="@color/Blue"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-90dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/belumMCU"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                android:gravity="center"
+                android:text="Belum pernah MCU?"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/daftarAkun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="100dp"
+                android:layout_weight="1"
+                android:text="Daftar Akun"
+                android:textColor="@color/Blue"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

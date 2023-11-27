@@ -45,6 +45,11 @@
             android:label="Chat"
             android:theme="@style/AppTheme" />
 
+        <activity android:name=".LupaPasswordActivity" />
+        <activity android:name=".SinkronAkunActivity" />
+        <activity android:name=".DaftarAkunActivity" />
+        <activity android:name=".HomescreenActivity" />
+
     </application>
 
 </manifest>
