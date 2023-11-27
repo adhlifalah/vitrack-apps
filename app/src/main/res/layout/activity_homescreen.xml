@@ -8,29 +8,38 @@ android:padding="16dp"
 android:background="#FFFFFF"
 tools:context=".HomescreenActivity">
 
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:background="@drawable/button_border"
+        android:textColor="@color/White"/>
+
 <!-- SearchView -->
-<SearchView
+<androidx.appcompat.widget.SearchView
     android:id="@+id/searchView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:queryHint="Search..."
     android:background="@drawable/rounded_square_background"
+    android:layout_marginTop="20dp"
     />
 
 <!-- ImageView for Image -->
-<ImageView
-    android:id="@+id/imageView"
-    android:layout_width="match_parent"
-    android:layout_height="380dp"
-    android:layout_gravity="center"
-    android:layout_marginTop="16dp"
-    android:layout_marginBottom="16dp"
-    android:adjustViewBounds="true"
-    android:scaleType="fitXY"
-    android:src="@drawable/medical" />
+    <ImageView
+        android:id="@+id/rsub"
+        android:layout_width="match_parent"
+        android:layout_height="241dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/rounded_image"
+        android:scaleType="fitXY"
+        android:src="@drawable/rsub" />
 
-
-<!-- Button for Medical Check Up -->
+    <!-- Button for Medical Check Up -->
 <Button
     android:id="@+id/btnDaftar"
     android:layout_width="match_parent"

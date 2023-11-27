@@ -1,11 +1,11 @@
 package com.example.app_cekkesehatan
 
+// MainActivity.kt
+import android.content.Context
+import android.widget.Button
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 
 class HomescreenActivity : AppCompatActivity() {
@@ -14,44 +14,31 @@ class HomescreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homescreen)
 
-        val searchView: SearchView = findViewById(R.id.searchView)
-        val imageView: ImageView = findViewById(R.id.imageView)
-        val btnDaftar: Button = findViewById(R.id.btnDaftar)
-        val btnRiwayat: Button = findViewById(R.id.btnRiwayat)
-        val btnKonsultasi: Button = findViewById(R.id.btnKonsultasi)
+        val sharedPreferences = getSharedPreferences("MCU_PREFERENCES", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.clear()
+        editor.apply()
 
-        // Handle search functionality if needed
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                // Handle search submission
-                return false
-            }
+        val btnMCU = findViewById<Button>(R.id.btnDaftar)
+        btnMCU.setOnClickListener {
+            val intent = Intent(this, MCUActivity::class.java)
+            startActivity(intent)
+        }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                // Handle search text change
-                return false
-            }
-        })
-
-        btnDaftar.setOnClickListener(View.OnClickListener {
-            // Tambahkan logika Anda untuk menangani klik tombol 'Daftar'
-        })
-
-        btnRiwayat.setOnClickListener(View.OnClickListener {
-            // Tambahkan logika Anda untuk menangani klik tombol 'Riwayat'
+        // Tombol Riwayat
+        findViewById<View>(R.id.btnRiwayat).setOnClickListener {
             openRiwayatActivity()
-        })
+        }
 
-        btnKonsultasi.setOnClickListener(View.OnClickListener {
-            // Tambahkan logika Anda untuk menangani klik tombol 'Konsultasi'
-        })
+        findViewById<View>(R.id.btnKonsultasi).setOnClickListener {
+            val intent = Intent(this, KonsultasiActivity::class.java)
+            startActivity(intent)
+        }
     }
 
-    // Fungsi untuk membuka RiwayatActivity
-    private fun openRiwayatActivity() {
-        // Intent untuk mengarahkan ke halaman baru untuk riwayat
-        // Gantilah "RiwayatActivity" dengan nama activity yang sesuai
-        val intent = Intent(this@HomescreenActivity, RiwayatMCUActivity::class.java)
+    // Metode untuk membuka RiwayatMCUActivity
+    fun openRiwayatActivity() {
+        val intent = Intent(this, RiwayatMCUActivity::class.java)
         startActivity(intent)
     }
 }
