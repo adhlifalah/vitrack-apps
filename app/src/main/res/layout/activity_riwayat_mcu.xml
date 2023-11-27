@@ -1,0 +1,50 @@
+<!-- activity_riwayat_mcu.xml -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text=""
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name: " />
+
+    <TextView
+        android:id="@+id/txtAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Age: " />
+
+    <!-- Tambahkan TextView untuk menampilkan informasi berat badan -->
+    <TextView
+        android:id="@+id/txtWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weight: " />
+
+    <!-- Tambahkan TextView untuk menampilkan informasi tinggi badan -->
+    <TextView
+        android:id="@+id/txtHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Height: " />
+
+    <!-- Tambahkan TextView untuk menampilkan informasi gula darah -->
+    <TextView
+        android:id="@+id/txtBloodSugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blood Sugar: " />
+
+</LinearLayout>

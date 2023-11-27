@@ -1,0 +1,4 @@
+<resources>
+    <!-- Ukuran drawableTop -->
+    <dimen name="drawable_top_size">12dp</dimen>
+</resources>
