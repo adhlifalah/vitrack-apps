@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,6 +13,93 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Halaman Sinkron Akun"
-        android:textSize="34sp" />
+        android:text="Sinkronisasi Akun"
+        android:textSize="36sp"
+        android:textColor="@color/Black"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/infoSinkronAkun"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingStart="50dp"
+        android:text="Sinkronisasi akun terlebih dahulu sebelum mengakses layanan online"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/logoVitrack"
+        android:layout_width="match_parent"
+        android:layout_height="183dp"
+        android:layout_marginBottom="-35dp"
+        app:srcCompat="@drawable/logo_vitrack" />
+
+    <EditText
+        android:id="@+id/editInputUname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/form_border"
+        android:hint="Username"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:paddingStart="20dp" />
+
+    <EditText
+        android:id="@+id/editInputDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/form_border"
+        android:hint="Tgl Lahir (yyyymmdd)"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:paddingStart="20dp" />
+
+    <EditText
+        android:id="@+id/editInputNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/form_border"
+        android:hint="No. Whatsapp"
+        android:inputType="number|phone"
+        android:minHeight="48dp"
+        android:paddingStart="20dp" />
+
+    <EditText
+        android:id="@+id/editInputPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/form_border"
+        android:hint="Password Baru"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="20dp" />
+
+    <EditText
+        android:id="@+id/editInputConfirmPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/form_border"
+        android:hint="Konfirmasi Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="20dp" />
+
+    <Button
+        android:id="@+id/buttonSinkron"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_border"
+        android:text="Sinkronisasi Akun"
+        android:textColor="@color/White" />
 </LinearLayout>

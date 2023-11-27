@@ -5,5 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="Blue">#037CC7</color>
     <color name="White">#FFFFFF</color>
+    <color name="Black">#000000</color>
     <!-- Add other colors as needed -->
 </resources>
