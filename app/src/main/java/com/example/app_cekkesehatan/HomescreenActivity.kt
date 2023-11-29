@@ -34,6 +34,11 @@ class HomescreenActivity : AppCompatActivity() {
             val intent = Intent(this, KonsultasiActivity::class.java)
             startActivity(intent)
         }
+
+        findViewById<View>(R.id.btnProfile).setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     // Metode untuk membuka RiwayatMCUActivity
