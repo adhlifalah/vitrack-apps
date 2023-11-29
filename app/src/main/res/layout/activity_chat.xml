@@ -1,5 +1,4 @@
 <!-- activity_chat.xml -->
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,9 +12,31 @@
         android:layout_above="@+id/etMessage"
         android:layout_marginBottom="16dp"/>
 
-    <!-- EditText untuk mengetik pesan -->
+    <!-- Container for displaying chat messages -->
+    <LinearLayout
+        android:id="@+id/chatContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etMessage"
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp">
 
-    <!-- Tombol Kirim -->
+        <!-- TextView for displaying sent messages -->
+        <TextView
+            android:id="@+id/tvSentMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/Black"
+            android:padding="8dp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="48dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- EditText untuk mengetik pesan -->
     <EditText
         android:id="@+id/etMessage"
         android:layout_width="match_parent"
@@ -25,8 +46,11 @@
         android:layout_marginBottom="73dp"
         android:hint="Ketik pesan..."
         android:minHeight="48dp"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:inputType="text"
+        android:autofillHints="email|text" />
 
+    <!-- Tombol Kirim -->
     <Button
         android:id="@+id/btnSend"
         android:layout_width="wrap_content"
