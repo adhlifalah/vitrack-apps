@@ -1,136 +1,142 @@
 <!-- activity_homescreen.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:padding="16dp"
-android:background="#FFFFFF"
-tools:context=".HomescreenActivity">
-
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:background="@drawable/button_border"
-        android:textColor="@color/White"/>
-
-<!-- SearchView -->
-<androidx.appcompat.widget.SearchView
-    android:id="@+id/searchView"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:queryHint="Search..."
-    android:background="@drawable/rounded_square_background"
-    android:layout_marginTop="20dp"
-    />
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-<!-- ImageView for Image -->
-    <ImageView
-        android:id="@+id/rsub"
-        android:layout_width="match_parent"
-        android:layout_height="241dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:adjustViewBounds="true"
-        android:background="@drawable/rounded_image"
-        android:scaleType="fitXY"
-        android:src="@drawable/rsub_1" />
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    tools:context=".HomescreenActivity">
 
-    <!-- activity_homescreen.xml -->
-    <TextView
-        android:id="@+id/textView2"
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:background="@drawable/button_border"
+            android:textColor="@color/White"/>
+
+    <!-- SearchView -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Menu Utama"
-        android:textSize="20sp" />
+        android:queryHint="Search..."
+        android:background="@drawable/rounded_square_background"
+        android:layout_marginTop="20dp"
+        />
 
-    <GridLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnCount="3"
-        android:rowCount="2"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:background="#FFFFFF"
-        tools:context=".HomescreenActivity">
+    <!-- ImageView for Image -->
+        <ImageView
+            android:id="@+id/rsub"
+            android:layout_width="match_parent"
+            android:layout_height="241dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rounded_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/rsub_1" />
 
-        <!-- Button Daftar -->
-        <Button
-            android:id="@+id/btnDaftar"
+        <!-- activity_homescreen.xml -->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu Utama"
+            android:textSize="20sp" />
+
+        <GridLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:rowCount="2"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="#FFFFFF"
+            tools:context=".HomescreenActivity">
+
+            <!-- Button Daftar -->
+            <Button
+                android:id="@+id/btnDaftar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Daftar"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/form_border"
+                android:drawableTop="@drawable/asset_7"/> <!-- Ganti ic_daftar dengan nama icon yang sesuai -->
+
+            <!-- Button Riwayat -->
+            <Button
+                android:id="@+id/btnRiwayat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Riwayat"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/form_border"
+                android:drawableTop="@drawable/asset_5" />
+
+            <!-- Button Konsultasi -->
+            <Button
+                android:id="@+id/btnKonsultasi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Konsultasi"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/form_border"
+                android:drawableTop="@drawable/asset_6" /> <!-- Ganti ic_konsultasi dengan nama icon yang sesuai -->
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Profile Kami"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/form_border"
+                android:drawableTop="@drawable/asset_4" />
+
+            <Button
+            android:id="@+id/btnBerita"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="Daftar"
+            android:text="Berita"
             android:padding="5dp"
             android:layout_margin="5dp"
             android:background="@drawable/form_border"
-            android:drawableTop="@drawable/asset_7"/> <!-- Ganti ic_daftar dengan nama icon yang sesuai -->
+            android:drawableTop="@drawable/asset_8" />
 
-        <!-- Button Riwayat -->
-        <Button
-            android:id="@+id/btnRiwayat"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Riwayat"
-            android:padding="5dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/form_border"
-            android:drawableTop="@drawable/asset_5" />
+            <Button
+                android:id="@+id/btnPetunjuk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Petunjuk"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/form_border"
+                android:drawableTop="@drawable/asset_9" />
+        </GridLayout>
 
-        <!-- Button Konsultasi -->
-        <Button
-            android:id="@+id/btnKonsultasi"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Konsultasi"
-            android:padding="5dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/form_border"
-            android:drawableTop="@drawable/asset_6" /> <!-- Ganti ic_konsultasi dengan nama icon yang sesuai -->
-
-        <Button
-            android:id="@+id/btnProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Profile Kami"
-            android:padding="5dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/form_border"
-            android:drawableTop="@drawable/asset_4" />
-
-        <Button
-        android:id="@+id/btnBerita"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="Berita"
-        android:padding="5dp"
-        android:layout_margin="5dp"
-        android:background="@drawable/form_border"
-        android:drawableTop="@drawable/asset_8" />
-
-        <Button
-            android:id="@+id/btnPetunjuk"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Petunjuk"
-            android:padding="5dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/form_border"
-            android:drawableTop="@drawable/asset_9" />
-    </GridLayout>
-
-</LinearLayout>
-
+    </LinearLayout>
+</ScrollView>
 
 
 
